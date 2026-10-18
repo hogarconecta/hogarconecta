@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Encuentra profesionales para tu hogar en Costa Rica.">
+<title>HogarConecta | Servicios para tu hogar</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-icon">⌂</span> Hogar<span>Conecta</span></a>
+  <nav><a href="#servicios">Servicios</a><a href="#profesionales">Profesionales</a><button class="outline" id="joinTop">Ofrecer mis servicios</button></nav>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">SERVICIOS PARA EL HOGAR · COSTA RICA</p>
+    <h1>Tu hogar en buenas manos.</h1>
+    <p class="lead">Encuentra profesionales independientes para esos trabajos que hacen tu casa más cómoda.</p>
+    <div class="search-row"><input id="search" placeholder="¿Qué servicio necesitas? Ej. plomería" aria-label="Buscar servicios"><button id="searchBtn">Buscar</button></div>
+    <p class="fine">Consulta perfiles y contacta directamente. Verifica referencias antes de contratar.</p>
+  </div>
+  <div class="hero-art" aria-label="Ilustración de casa"><div class="sun"></div><div class="house"><div class="roof"></div><div class="house-body"><div class="window"></div><div class="door"></div></div><div class="plant">♧</div></div><div class="float-card">✓ <span>Servicios locales</span></div></div>
+</section>
+<section id="servicios" class="section">
+  <div class="section-heading"><div><p class="eyebrow">ENCUENTRA AYUDA</p><h2>¿Qué necesitas resolver?</h2></div><p>Elige una categoría para ver profesionales.</p></div>
+  <div id="categories" class="category-grid"></div>
+</section>
+<section id="profesionales" class="section muted">
+  <div class="section-heading"><div><p class="eyebrow">DIRECTORIO LOCAL</p><h2>Profesionales destacados</h2></div><span class="pill">Perfiles de demostración</span></div>
+  <div id="providers" class="provider-grid"></div>
+  <p class="fine">Los profesionales que aparecen son ejemplos de demostración, no proveedores verificados ni ofertas reales.</p>
+</section>
+<section class="join-section" id="registro">
+  <div><p class="eyebrow">¿OFRECES SERVICIOS?</p><h2>Consigue más visibilidad para tu trabajo.</h2><p>Crea tu perfil y permite que nuevos clientes te contacten.</p></div>
+  <button id="joinMain">Registrar mi negocio <span>→</span></button>
+</section>
+</main>
+<footer><a class="brand" href="#">⌂ Hogar<span>Conecta</span></a><p>Una plataforma independiente para conectar hogares y profesionales.</p><small>Prototipo inicial · Costa Rica · © <span id="year"></span></small></footer>
+
+<dialog id="providerDialog">
+<form id="providerForm" method="dialog" class="dialog-content">
+<button type="button" class="close" id="closeDialog" aria-label="Cerrar">×</button>
+<p class="eyebrow">ÚNETE A HOGARCONECTA</p><h2>Registra tu servicio</h2>
+<p class="fine">Esta versión guarda datos solo en este navegador para pruebas. No envía información a un servidor.</p>
+<label>Nombre o nombre comercial<input name="name" required maxlength="80" placeholder="Ej. Servicios Pérez"></label>
+<label>Servicio principal<select name="category" required><option value="">Selecciona una categoría</option><option>Fontanería</option><option>Electricidad</option><option>Limpieza</option><option>Jardinería</option><option>Pintura</option><option>Reparaciones generales</option><option>Armado de muebles</option><option>Otro</option></select></label>
+<label>Cantón o zona de trabajo<input name="area" required maxlength="80" placeholder="Ej. Curridabat, San José"></label>
+<label>WhatsApp (con código de país)<input name="phone" required inputmode="tel" placeholder="Ej. 50688888888" pattern="[0-9 +()-]{8,22}"></label>
+<label>Descripción breve<textarea name="description" maxlength="300" placeholder="Experiencia, horario, servicios..."></textarea></label>
+<label>Plan de interés<select name="plan"><option>Básico gratuito</option><option>Profesional - ₡4.000/mes (propuesto)</option><option>Premium - ₡7.000/mes (propuesto)</option></select></label>
+<button class="primary full" type="submit">Guardar perfil de prueba</button>
+<div id="formMessage" role="status"></div>
+</form>
+</dialog>
+<script src="app.js"></script>
+</body></html>
